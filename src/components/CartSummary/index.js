@@ -43,7 +43,7 @@ export default ({
         <input name="name" placeholder="Your Name" type="text" />
         <input name="email" placeholder="name@name.com" type="email" />
 
-        <button type="foo">Check out</button>
+        <button>Check out</button>
       </form>
 
       {/* <Button color="black" floated="right" onClick={sayHello}>
