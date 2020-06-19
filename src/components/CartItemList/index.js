@@ -5,7 +5,7 @@ import {Item, Button, Loader, Message, Responsive} from 'semantic-ui-react'
 
 export default ({items, removeFromCart, loading, completed}) => {
   if (loading) return <Loader active inline="centered" />
-
+  // console.log(items)
   if (completed)
     return (
       <Message success>
@@ -26,7 +26,7 @@ export default ({items, removeFromCart, loading, completed}) => {
   const mapCartItemsToItems = items =>
     items.map(({id, product_id, name, quantity, meta, image}) => {
       const price = meta.display_price.with_tax.unit.formatted || ''
-      const imageUrl = image.href || '/static/moltin-light-hex.svg'
+      const imageUrl = image.href || '/static/android-chrome-512x512.png'
 
       const DesktopItemImage = () => (
         <Item.Image

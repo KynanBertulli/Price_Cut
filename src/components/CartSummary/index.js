@@ -28,6 +28,19 @@ export default ({
         triggerEvent="onClick"
       > */}
 
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="botfield"
+      >
+        <input type="hidden" name="name" placeholder="Your Name" />
+        <input type="hidden" name="email" placeholder="name@name.com" />
+        <Button color="black" floated="right" onClick={sayHello}>
+          Check out
+        </Button>
+      </form>
+
       <Button color="black" floated="right" onClick={sayHello}>
         Check out
       </Button>
