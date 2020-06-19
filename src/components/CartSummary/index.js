@@ -36,10 +36,31 @@ export default ({
         data-netlify="true"
         data-netlify-honeypot="botfield"
       >
-        <input type="hidden" name={amount} placeholder="Your Name" />
-        <input type="hidden" name={currency} placeholder="name@name.com" />
-        <input type="hidden" name={name} placeholder="name@name.com" />
-        <input type="hidden" name={quantity} placeholder="name@name.com" />
+        <input type="hidden" name="form-name" value="Contact Form" />
+        <input
+          type="hidden"
+          name="Name"
+          value={amount}
+          placeholder="Your Name"
+        />
+        <input
+          type="hidden"
+          name="email"
+          value={currency}
+          placeholder="name@name.com"
+        />
+        <input
+          type="hidden"
+          name="value"
+          value={name}
+          placeholder="name@name.com"
+        />
+        <input
+          type="hidden"
+          name="quantity"
+          value={quantity}
+          placeholder="name@name.com"
+        />
         <input name="name" placeholder="Your Name" type="text" />
         <input name="email" placeholder="name@name.com" type="email" />
 
