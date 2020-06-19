@@ -5,7 +5,7 @@ import {Item, Button, Loader, Message, Responsive} from 'semantic-ui-react'
 
 export default ({items, removeFromCart, loading, completed}) => {
   if (loading) return <Loader active inline="centered" />
-  // console.log(items)
+  console.log(items)
   if (completed)
     return (
       <Message success>
