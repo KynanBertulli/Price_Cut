@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable react/button-has-type */
 import React from 'react'
 // import StripeCheckout from 'react-stripe-checkout'
@@ -30,19 +32,50 @@ export default ({
         reconfigureOnUpdate={false}
         triggerEvent="onClick"
       > */}
-      <form
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>
+            Your Name: <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{' '}
+            <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+      {/* <form
         name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="botfield"
       >
-        <input type="hidden" name="form-name" value="Contact Form" />
-        <input
-          type="hidden"
-          name="Name"
-          value={amount}
-          placeholder="Your Name"
-        />
+        <p>
+          <input type="hidden" name="form-name" value="Contact Form" />
+          <input
+            type="hidden"
+            name="Name"
+            value={amount}
+            placeholder="Your Name"
+          />
+        </p>
         <input
           type="hidden"
           name="email"
@@ -65,7 +98,7 @@ export default ({
         <input name="email" placeholder="name@name.com" type="email" />
 
         <button>Check out</button>
-      </form>
+      </form> */}
 
       {/* <Button color="black" floated="right" onClick={sayHello}>
         Check out
