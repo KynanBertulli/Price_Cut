@@ -36,14 +36,6 @@ export default ({items, removeFromCart, loading, completed}) => {
           style={{background: '#f2f2f2'}}
         />
       )
-      const MobileItemImage = () => (
-        <Item.Image
-          src={imageUrl}
-          alt={name}
-          size="small"
-          style={{background: 'none'}}
-        />
-      )
 
       return {
         childKey: id,
@@ -53,16 +45,16 @@ export default ({items, removeFromCart, loading, completed}) => {
           </Item.Header>
         ),
         image: (
-          <React.Fragment>
-            <Responsive as={MobileItemImage} {...Responsive.onlyMobile} />
+          <>
+            {/* <Responsive as={MobileItemImage} {null} /> */}
             <Responsive
               as={DesktopItemImage}
               minWidth={Responsive.onlyTablet.minWidth}
             />
-          </React.Fragment>
+          </>
         ),
         meta: `${quantity}x ${price}`,
-        description: 'Some more information goes here....',
+        // description: 'Some more information goes here....',
         extra: (
           <Button
             basic
