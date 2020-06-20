@@ -10,7 +10,7 @@ import {Segment, Divider} from 'semantic-ui-react'
 
 export default ({
   display_price: {
-    with_tax: {quantity, name, amount, currency, formatted},
+    with_tax: {formatted},
   },
 }) => (
   <div>
@@ -32,34 +32,17 @@ export default ({
         reconfigureOnUpdate={false}
         triggerEvent="onClick"
       > */}
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{' '}
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select>
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+      <form name="contact" action="/" method="post" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <div className="field">
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" id="name" value="dave" />
+        </div>
+        <div className="field">
+          <label htmlFor="email">Email</label>
+          <input type="text" name="email" id="email" value="email@email.com" />
+        </div>
+        <input type="submit" value="Send Message" className="" />
       </form>
       {/* <form
         name="contact"
