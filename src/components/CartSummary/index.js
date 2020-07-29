@@ -19,14 +19,14 @@ export default ({
     </Segment>
 
     <form
-      name="file-upload"
+      name="contact"
       method="post"
       action="/thanks/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       // onSubmit={this.handleSubmit}
     >
-      <input type="hidden" name="form-name" value="file-upload" />
+      <input type="hidden" name="contact" value="file-upload" />
     </form>
   </div>
 )
